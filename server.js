@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-  origin: '*', // Em produção: 'https://uzj9me-zs.myshopify.com'
+  origin: '*', // Em produção: 'https://sua-loja-black.myshopify.com'
   credentials: true
 }));
 
@@ -14,13 +14,13 @@ app.use(express.json());
 
 // Configurações das Lojas
 const BLACK_STORE = {
-  shop: process.env.uzj9me-zs.myshopify.com,
-  accessToken: process.env.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
+  shop: process.env.BLACK_STORE_DOMAIN,
+  accessToken: process.env.BLACK_STORE_TOKEN
 };
 
 const WHITE_STORE = {
-  shop: process.env.b6wypa-1t.myshopify.com,
-  accessToken: process.env.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
+  shop: process.env.WHITE_STORE_DOMAIN,
+  accessToken: process.env.WHITE_STORE_TOKEN
 };
 
 // Cache para melhorar performance
